@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+    合川中学年级名称转义 前端部分
+    GitHub https://github.com/SHIERTX/hczx-gread-meaning
+    作者 SHIERTX 以 GPLv3 协议授权
+-->
+    <head>
+        <title>合川中学年级名称转义</title>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <style>
+            body {
+                background-color: #f0f0f0;
+            }
+            .container {
+                width: 60%;
+                margin: 5% auto 0;
+                padding: 2% 5%;
+                border-radius: 10px
+            }
+            ul {
+                padding-left: 20px;
+            }
+                ul li {
+                    line-height: 2.3
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>合川中学年级名称转义</h1>
+            <div class="form-text">适用于重庆市合川中学校内称呼转转义</div><br>
+
+            <form method="GET" action="./hgm.php">
+
+                <label for="section-select" class="form-label">选择部门</label>
+                <select id="section-select" class="form-select" aria-label="选择部门" name="section">
+                    <option value="middle">初中部</option>
+                    <option value="high">高中部</option>
+                </select>
+                
+                <label for="year" class="col-form-label">年级</label>
+                <input type="text" id="year" class="form-control" aria-describedby="year" name="year">
+                <div id="year" class="form-text">如 2020</div>
+                
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="check" required>
+                    <label class="form-check-label" for="check">我已知晓网站不会存储输入信息且确定已填写完所有表单项</label>
+                    <div class="invalid-feedback">勾选以启用提交</div>
+                </div>
+
+                <br><button type="submit" class="btn btn-primary">查询</button>
+            </form>
+        </div>
+    </body>
+</html>
